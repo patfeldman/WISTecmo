@@ -1,0 +1,60 @@
+﻿    <div ui-view="topMenu"></div>
+    <div ui-view="bottomMenu"></div>
+
+
+    <section class="pageContent">
+
+        <section class="pageHeaderSection">
+            <h3>{{vm.title}}</h3>
+        </section>
+
+
+        <div class="options_body">
+            <fieldset class="pageFiltersSection">
+                <legend>Page Filters:</legend>
+                <div class="pageFilterItem dropdown" ng-repeat="options in vm.options">
+                    <span class="title">{{options.title}}:</span>
+                    <span>
+                        <select name="{{options.title}}" id="{{options.title}}" class="{{options.title}}DropDown selectOptions" ng-model="data.filters[$index]" ng-change="vm.selectChange('{{options.title}}')">
+                            <option value="{{selectOption.value}}" ng-repeat="selectOption in vm.getSpecificSelectionOptions(options.title, options.object)">{{selectOption.name}}</option>
+                        </select>
+                    </span>
+                </div>
+                <a class="submitButton" ng-click="vm.updateSearch()">SUBMIT BUTTON</a>
+                <div class="clearer"></div>
+            </fieldset>
+
+
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Name</th>
+                    <th class="lowPriority">Height</th>
+                    <th class="lowPriority">Weight</th>
+                    <th>Rating</th>
+                    <th class="medPriority">Rank</th>
+                    <th class="medPriority">Home</th>
+                    <th>Miles</th>
+                    <th>Considering</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="borderColorSecondary" ng-repeat="player in vm.players">
+                    <td>{{vm.getPositionName(player.Position)}}</td>
+                    <td>
+                        <a ui-sref="player({playerId:{{player.PlayerId}}})">{{vm.getPlayerName(player.FirstName, player.LastName)}}</a>
+                    </td>
+                    <td class="lowPriority">{{player.Height}}</td>
+                    <td class="lowPriority">{{player.Weight}}</td>
+                    <td>{{player.rating}}</td>
+                    <td class="medPriority">{{player.PositionRank}}</td>
+                    <td class="medPriority">{{player.HometownCity}}, {{player.HometownState}}</td>
+                    <td>{{player.Miles}}</td>
+                    <td>{{vm.getSearchStatus(player.TeamsConsidering)}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>

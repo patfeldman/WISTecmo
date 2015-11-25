@@ -1,0 +1,9 @@
+<footer>
+    <nav>
+        <ul>
+            <li class="borderColorSecondary" ng-repeat="page in vm.pages" ng-click="vm.stateChange('{{page.state}}')" ng-class="{selected: vm.isSelected('{{page.state}}')}">
+                {{page.title}}
+            </li>
+        </ul>
+    </nav>
+</footer>

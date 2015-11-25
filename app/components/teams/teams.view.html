@@ -1,0 +1,19 @@
+<section class="pageContent">
+
+    <section class="pageHeaderSection">
+        <div class="headerTopRow">
+        </div>
+    </section>
+    <section id="TeamsList">
+
+        <div class="borderColorSecondary" ng-repeat="team in vm.teams">
+            <div class="rowone">
+                <div class="teamInfo">
+                    <h4 class="teamUserName">{{vm.teamInfo.UserName}}</h4>
+                    <div class="teamName">{{vm.teamInfo.TeamLocation}} {{vm.teamInfo.TeamName}}</div>
+                </div>
+            </div>  
+            <div class="clearer"></div>
+        </div>
+    </section>
+</section>

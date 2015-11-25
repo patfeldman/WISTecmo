@@ -1,0 +1,48 @@
+﻿    <div ui-view="topMenu"></div>
+
+    <section class="pageContent">
+
+		<section class="pageHeaderSection">
+			<h3>{{vm.title}}</h3>
+		</section>
+
+		<fieldset class="pageFiltersSection">
+			<legend>Page Filters:</legend>
+			<div class="pageFilterItem dropdown" ng-repeat="options in vm.options">
+				<span class="title">{{options.title}}</span>
+				<span>
+					<select name="{{options.title}}" id="{{options.title}}" onchange="PositionSelectionFilter.toggleSelectedPosition(this);">
+						<option value="{{selectOption.value}}" ng-repeat="selectOption in options.object">{{selectOption.name}}</option>
+					</select>
+				</span>
+			</div>
+		</fieldset>
+
+		<table class="playerTable">
+			<thead>
+				<tr>
+					<th>Pos</th>
+					<th>Name</th>
+					<th class="lowPriority">Height</th>
+					<th class="lowPriority">Weight</th>
+					<th>Rank</th>
+					<th class="medPriority">Home</th>
+					<th>Miles</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="borderColorSecondary" ng-repeat="player in vm.players" data-positionid="{{player.Position}}">
+					<td>{{vm.getPositionName(player.Position)}}</td>
+					<td class="playerName">
+                        <a ui-sref="player({playerId:{{player.PlayerId}}})">{{vm.getPlayerName(player.FirstName, player.LastName)}}</a>
+					</td>
+					<td class="lowPriority">{{player.Height}}</td>
+					<td class="lowPriority">{{player.Weight}}</td>
+					<td>{{player.PositionRank}}</td>
+					<td class="medPriority">{{player.HometownCity}}, {{player.HometownState}}</td>
+					<td>{{player.Miles}}</td>
+				</tr>
+			</tbody>
+		</table>
+    </section>
+    <div ui-view="bottomMenu"></div>

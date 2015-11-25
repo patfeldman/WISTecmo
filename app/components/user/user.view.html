@@ -1,0 +1,24 @@
+﻿<section class="pageContent">
+
+	<section class="pageHeaderSection">
+		<h3>{{vm.title}}</h3>
+		<p>{{vm.description}}</p>
+	</section>
+
+
+
+	<fieldset class="pageFiltersSection">
+		<legend>Sign In:</legend>
+		<div class="pageFilterItem dropdown">
+			<span class="title">User Name:</span>
+			<span>
+				<input id="UserNameInput" type="text" />		
+			</span>
+		</div>
+
+		<a class="submitButton" ng-click="vm.submitButtonClick()">Submit</a>
+	</fieldset>
+
+	<div class="errorMessage" style="display:none;"></div>
+	
+</section>

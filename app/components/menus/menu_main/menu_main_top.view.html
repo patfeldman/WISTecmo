@@ -1,0 +1,28 @@
+﻿<header>
+	<div class="teamOverview backgroundColorPrimary">
+		<img src="assets/images/logo.png" alt="logo" ui-sref="summary">
+		<span class="teamName">{{vm.teamName}}</span>
+		<span class="worldName">{{vm.worldName}}</span>
+		<div class="clearer"></div>		
+		<span class="teamDetails">
+			<ul>
+				<li>
+					<span>Conf:</span>
+					{{vm.conferenceName}}
+				</li>
+				<li>
+					<span>Scholarships:</span>
+					{{vm.numOpenScholarships}}
+				</li>
+				<li>
+					<span>Budget:</span>
+					{{vm.budgetRemaining}}
+				</li>
+			</ul>
+		</span>	
+	</div>
+	<div class="recrutingDates">
+		<span>Rucruting Period:</span>
+		{{vm.startDate}} - {{vm.endDate}}
+	</div>
+</header>  

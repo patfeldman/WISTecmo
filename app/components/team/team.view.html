@@ -1,0 +1,343 @@
+<section class="pageContent">
+
+    <section class="pageHeaderSection">
+        <div class="headerTopRow">
+            <div class="headerShot">
+                <img src="https://www.whatifsports.com/gd/images/headshots/players/202764.gif" class="headShot" />
+            </div>
+            <div class="topInfo">
+                <div class="middleInfo">
+                    <div class="playerInfo">
+                        <h4 class="playerName">{{vm.playerInfo.FirstName}} {{vm.playerInfo.LastName}}</h4>
+                        <div class="weakText">{{vm.playerInfo.HighSchoolName}}</div>
+                        <div class="weakText">{{vm.playerInfo.HometownCity}}, {{vm.playerInfo.HometownState}} ({{vm.playerInfo.Miles}})</div>
+                    </div>
+                    <div class="positionGroup">
+                        <div class="positionCircle">{{vm.getPositionName(vm.playerInfo.Position)}}</div>
+                    </div>
+                    <div class="clearer"></div>
+                </div>
+                <div class="bottomInfo">
+                    <span class="weakText">Rating:</span><span class="infoText">{{vm.getPositionRating(vm.playerInfo.Position, vm.playerInfo.RoleRatings)}}</span>
+                    <span class="weakText">{{vm.getRatingName(vm.playerInfo.Position)}}</span><span class="infoText">{{vm.getPositionRating(vm.playerInfo.Position, vm.playerInfo.RoleRatings)}}</span>
+                    <span class="weakText">HT:</span><span class="infoText">{{vm.playerInfo.Height}}</span>
+                    <span class="weakText">WT:</span><span class="infoText">{{vm.playerInfo.Weight}}</span>
+                    <span class="weakText">GPA:</span><span class="infoText">{{vm.playerInfo.Gpa}}</span>
+                    <div class="clearer"></div>
+                </div>
+                <div class="clearer"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="recruiting">
+
+        <div class="accordianTitle">
+            <div class="title">Recruit</div>
+            <div class="accordingDropDown"></div>
+        </div>
+        <div class="accordionSection none">
+            <div class="RecruitingOptions">
+
+                <div id="ctl00_ctl00_Main_Main_CallAssistOption" class="RecruitingOption">
+                    <div class="OptionCost">$10</div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_CallAssistIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/ac_call.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Phone calls (Assist. Coach)</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$CallAssist" id="ctl00_ctl00_Main_Main_CallAssist" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ctl00_ctl00_Main_Main_ScoutingAssistTripOption" class="RecruitingOption">
+                    <div class="OptionCost"><span id="ctl00_ctl00_Main_Main_ScoutingAssistTripCost">$632</span></div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_ScoutAssistIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/ac_scouting.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Scouting Trip (Assist. Coach)</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$ScoutingAssistTrip" id="ctl00_ctl00_Main_Main_ScoutingAssistTrip" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ctl00_ctl00_Main_Main_CallHeadOption" class="RecruitingOption">
+                    <div class="OptionCost">$<span id="ctl00_ctl00_Main_Main_CallHeadCost">15</span></div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_CallHeadIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/hc_call.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Phone calls (Head Coach)</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$CallHead" id="ctl00_ctl00_Main_Main_CallHead" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ctl00_ctl00_Main_Main_ScoutingHeadTripOption" class="RecruitingOption">
+                    <div class="OptionCost"><span id="ctl00_ctl00_Main_Main_ScoutingHeadTripCost">$801</span></div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_ScoutHeadIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/hc_scouting.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Scouting Trip (Head Coach)</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$ScoutingHeadTrip" id="ctl00_ctl00_Main_Main_ScoutingHeadTrip" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ctl00_ctl00_Main_Main_SendMaterialsOption" class="RecruitingOption">
+                    <div class="OptionCost">$15</div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_SendMaterialsIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/send_letters.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Send Letters/Materials</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$SendMaterials" id="ctl00_ctl00_Main_Main_SendMaterials" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ctl00_ctl00_Main_Main_HomeAssistVisitOption" class="RecruitingOption">
+                    <div class="OptionCost"><span id="ctl00_ctl00_Main_Main_HomeAssistVisitCost">$975</span></div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_HomeAssistVisitIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/ac_visit.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Home Visit (Assist. Coach)</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$HomeAssistVisit" id="ctl00_ctl00_Main_Main_HomeAssistVisit" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ctl00_ctl00_Main_Main_percent_Of_Plays" class="RecruitingOption">
+                    <div class="OptionCost">$150</div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_Image1" src="https://www.whatifsports.com/gd/Images/icons/recruit/PercentageOfPlays.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Guaranteed % of Plays</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$PercentOfPlays" id="ctl00_ctl00_Main_Main_PercentOfPlays" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                            <option value="40">40</option>
+                            <option value="45">45</option>
+                            <option value="50">50</option>
+                            <option value="55">55</option>
+                            <option value="60">60</option>
+                            <option value="65">65</option>
+                            <option value="70">70</option>
+                            <option value="75">75</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div id="ctl00_ctl00_Main_Main_HomeHeadVisitOption" class="RecruitingOption">
+                    <div class="OptionCost"><span id="ctl00_ctl00_Main_Main_HomeHeadVisitCost">$1275</span></div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_HomeHeadVisitIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/hc_visit.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Home Visit (Head Coach)</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$HomeHeadVisit" id="ctl00_ctl00_Main_Main_HomeHeadVisit" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ctl00_ctl00_Main_Main_starter_Freshman" class="RecruitingOption">
+                    <div class="OptionCost">$250</div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_StarterFreshmanIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/start_fresh.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Guaranteed Start (Freshman)</div>
+                    <div class="OptionValues">
+                        <input id="ctl00_ctl00_Main_Main_startFreshman" type="checkbox" name="ctl00$ctl00$Main$Main$startFreshman" onclick="javascript:updateCost();">
+                    </div>
+                </div>
+
+
+
+                <div id="ctl00_ctl00_Main_Main_CampusVisitOption" class="RecruitingOption">
+                    <div class="OptionCost"><span id="ctl00_ctl00_Main_Main_CampusVisitCost">$1441</span></div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_CampusVisitIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/campus_visit.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Campus Visit</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$CampusVisit" id="ctl00_ctl00_Main_Main_CampusVisit" class="recruitTool" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ctl00_ctl00_Main_Main_starter_Sophomore" class="RecruitingOption">
+                    <div class="OptionCost">$100</div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_StarterSophomoreIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/start_soph.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Guaranteed Start (Sophomore)</div>
+                    <div class="OptionValues">
+                        <input id="ctl00_ctl00_Main_Main_startSophomore" type="checkbox" name="ctl00$ctl00$Main$Main$startSophomore" onclick="javascript:updateCost();">
+                    </div>
+                </div>
+
+
+
+                <div id="ctl00_ctl00_Main_Main_ScholarshipOfferOption" class="RecruitingOption">
+                    <div class="OptionCost">$100</div>
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_OfferIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/ScholarshipOffer.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Offer Scholarship</div>
+                    <div class="OptionValues">
+                        <input id="ctl00_ctl00_Main_Main_Scholarship_Offer" type="checkbox" name="ctl00$ctl00$Main$Main$Scholarship_Offer" onclick="javascript:updateCost();">
+                    </div>
+                </div>
+
+
+
+                <div id="ctl00_ctl00_Main_Main_BoosterGiftOption" class="RecruitingOption">
+                    <div class="OptionIcon">
+                        <img id="ctl00_ctl00_Main_Main_BoosterIcon" src="https://www.whatifsports.com/gd/Images/icons/recruit/booster.gif" style="border-width:0px;">
+                    </div>
+                    <div class="OptionText">Booster Gifts</div>
+                    <div class="OptionValues">
+                        <select name="ctl00$ctl00$Main$Main$BoosterGifts" id="ctl00_ctl00_Main_Main_BoosterGifts" onchange="javascript:updateCost();">
+                            <option value="0"></option>
+                            <option value="100">$100</option>
+                            <option value="250">Throwback Jersey</option>
+                            <option value="500">Plane Tickets</option>
+                            <option value="1000">Stereo System</option>
+                            <option value="1500">Jersey + $1,500</option>
+                            <option value="2500">Stereo + $1,500</option>
+                            <option value="4000">$4,000</option>
+                            <option value="6000">High-Def TV</option>
+                            <option value="7500">$7,500</option>
+                            <option value="10000">$10,000</option>
+                            <option value="15000">Car</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section class="allRatings">
+
+        <div class="accordianTitle">
+            <div class="title">Ratings</div>
+            <div class="accordingDropDown"></div>
+        </div>
+        <div class="accordionSection none">
+            <table>
+                <tbody>
+                    <tr><td>Athleticism</td><td>{{vm.playerInfo.Athleticism}}</td></tr>
+                    <tr><td>Speed</td><td>{{vm.playerInfo.Speed}}</td></tr>
+                    <tr><td>Durability</td><td>{{vm.playerInfo.Durability}}</td></tr>
+                    <tr><td>WorkEthic</td><td>{{vm.playerInfo.WorkEthic}}</td></tr>
+                    <tr><td>Stamina</td><td>{{vm.playerInfo.Stamina}}</td></tr>
+                    <tr><td>Strength</td><td>{{vm.playerInfo.Strength}}</td></tr>
+                    <tr><td>Blocking</td><td>{{vm.playerInfo.Blocking}}</td></tr>
+                    <tr><td>Tackling</td><td>{{vm.playerInfo.Tackling}}</td></tr>
+                    <tr><td>Hands</td><td>{{vm.playerInfo.Hands}}</td></tr>
+                    <tr><td>GameInstinct</td><td>{{vm.playerInfo.GameInstinct}}</td></tr>
+                    <tr><td>Elusiveness</td><td>{{vm.playerInfo.Elusiveness}}</td></tr>
+                    <tr><td>Technique</td><td>{{vm.playerInfo.Technique}}</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </section>
+	
+
+</section>

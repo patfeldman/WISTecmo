@@ -1,0 +1,126 @@
+﻿html,body{
+    height:100%;
+    font-family: 'Exo 2';
+}
+
+body {
+    background-color: #ffffff;
+}
+
+@media (max-width: 550px) {
+    .lowPriority {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .medPriority {
+        display: none;
+    }
+}
+
+/*-------------------
+Boot strap extensions
+------------------------*/
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+/*from GD*/
+
+div.RecruitingOption {
+    float: left;
+    margin: 3px 0px 0px 3px;
+    width: 100%;
+    background-color: #ece9e2;
+    border: 1px solid #959595;
+}
+div.RecruitingOption div.OptionCost {
+    float: left;
+    width: 40px;
+    height: 34px;
+    background-image: url(https://www.whatifsports.com/gd/Images/Icons/recruit/CostBox.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 34px;
+    color: #ffffff;
+    margin: 1px 1px 1px 2px;
+}
+
+
+div.RecruitingOption div.OptionValues {
+    float: right;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 8px;
+    margin: 1px 2px 1px 1px;
+}
+div.RecruitingOption div.OptionText {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    margin: 1px;
+}
+div.RecruitingOption div.OptionIcon {
+    float: left;
+    width: 33px;
+    height: 34px;
+    margin: 1px;
+    overflow: hidden;
+}
+.headerShot {
+    float: left;
+}
+.headerShot img{
+    width:70px;
+    height:70px;
+}
+.headerTopRow{
+    background:#2a2828;
+    color:white;
+}
+.playerName{
+    font-size : 16px;
+    padding : 0;
+}
+.none {
+    display:block;
+}
+.clearer{
+    clear:both;
+}
